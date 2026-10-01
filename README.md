@@ -32,10 +32,12 @@ Environment variables:
 
 ## Public deployment
 
-The repository includes `Dockerfile` and `render.yaml` for a persistent Render
-deployment. Create a Render Web Service from this repository, set
+The repository includes `Dockerfile` and `render.yaml` for a Render
+deployment. The Blueprint uses the free plan. Create a Render Web Service from this repository, set
 `INSTAGRAM_ACCESS_TOKEN` as a secret, set `PUBLIC_BASE_URL` to the HTTPS URL
-assigned by Render, and deploy. Do not put the token in the repository.
+assigned by Render, and deploy. Do not put the token in the repository. The
+free plan may suspend inactive services, so hourly unattended publishing is
+not guaranteed; a paid always-on plan is required for reliable scheduling.
 
 ## API
 
