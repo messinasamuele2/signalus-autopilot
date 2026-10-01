@@ -1,0 +1,20 @@
+services:
+  - type: web
+    name: signalus-autopilot
+    runtime: docker
+    plan: starter
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /api/news
+    envVars:
+      - key: PORT
+        value: "10000"
+      - key: INSTAGRAM_ACCESS_TOKEN
+        sync: false
+      - key: INSTAGRAM_API_VERSION
+        value: v24.0
+      - key: PUBLIC_BASE_URL
+        sync: false
+      - key: AUTO_PUBLISH
+        value: "true"
+      - key: PUBLISH_INTERVAL_MINUTES
+        value: "60"

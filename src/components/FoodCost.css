@@ -1,0 +1,113 @@
+.foodcost-module {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.fc-overview-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.fc-main-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.chart-wrapper {
+  position: relative;
+  width: 100%;
+}
+
+.chart-center-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.chart-center-text h2 {
+  font-size: 2rem;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.chart-center-text span {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+.fc-stats-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+}
+
+.stat-card-small {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+}
+
+.stat-card-small h4 {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.stat-card-small p {
+  font-weight: 500;
+  font-size: 0.95rem;
+  margin-top: 0.2rem;
+}
+
+.table-card {
+  overflow-x: auto;
+}
+
+.fc-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fc-table th {
+  text-align: left;
+  padding: 1rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.9rem;
+}
+
+.fc-table td {
+  padding: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  font-size: 0.95rem;
+}
+
+.fc-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.02);
+}
+
+.status-dot {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  margin-right: 0.5rem;
+}
+
+.status-dot.success { background-color: var(--accent-success); box-shadow: 0 0 8px var(--accent-success); }
+.status-dot.warning { background-color: var(--accent-warning); box-shadow: 0 0 8px var(--accent-warning); }
+.status-dot.danger { background-color: var(--accent-danger); box-shadow: 0 0 8px var(--accent-danger); }
+
+@media (max-width: 900px) {
+  .fc-overview-grid {
+    grid-template-columns: 1fr;
+  }
+}

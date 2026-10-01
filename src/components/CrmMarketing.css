@@ -1,0 +1,144 @@
+.crm-module {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.crm-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stat-info h4 {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.crm-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.segment-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.segment-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1.25rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.segment-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.segment-info h4 {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.campaign-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1.25rem;
+}
+
+.campaign-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.campaign-stats {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  font-size: 0.85rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border-color);
+}
+
+@media (max-width: 900px) {
+  .crm-content, .crm-stats, .template-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Template Maker */
+.template-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.channel-toggles {
+  display: flex;
+  gap: 1rem;
+}
+
+.badge-secondary {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid var(--border-color);
+  padding: 0.25rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.75rem;
+}
+
+.cursor-pointer {
+  cursor: pointer;
+}
+.cursor-pointer:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.message-textarea {
+  width: 100%;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  font-family: inherit;
+  resize: vertical;
+  outline: none;
+}
+
+.message-textarea:focus {
+  border-color: var(--accent-primary);
+}
+
+.bg-success {
+  background-color: var(--accent-success);
+}
